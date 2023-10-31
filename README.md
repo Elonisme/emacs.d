@@ -1,126 +1,17 @@
-[![Build Status](https://github.com/purcell/emacs.d/workflows/CI/badge.svg)](https://github.com/purcell/emacs.d/actions)
-<a href="https://www.patreon.com/sanityinc"><img alt="Support me" src="https://img.shields.io/badge/Support%20Me-%F0%9F%92%97-ff69b4.svg"></a>
+# README
 
-# A reasonable Emacs config
+Recently, I am busy with everything. I feel tired and anxious. I'm  trying to find a method that can bring about lasting change and make  solving my life's challenges easier and simpler. I am a socialist and I  support the free software movement. I used to write some Emacs  configurations, but these setups couldn't address my problems. I've  fallen into a new trap of doing things just for the sake of doing them.  In the past, in my quest for a comprehensive Emacs configuration, I used to search for and copy others' configurations, but I had little  knowledge of these Emacs Lisp codes.
 
-This is my emacs configuration tree, continually used and tweaked
-since 2000, and it may be a good starting point for other Emacs
-users, especially web developers. These days it's
-somewhat geared towards OS X, but it is known to also work on Linux
-and Windows.
+When I learned about the concept of 'redguardtoo,' I just thought it was okay! Let's find a mature Emacs configuration, and I will easily solve  these issues. But reality hit me hard. I cloned DOOM Emacs, Space Emacs, and Centaur Emacs. I naively believed that using them would set me  free.
 
-Emacs itself comes with support for many programming languages. This
-config adds improved defaults and extended support for the following, listed
-in the approximate order of how much I use them, from most to least:
+But these mature Emacs configurations are either using a new  configuration format or authors have configured the parts I want to  configure, which creates chaos. I'm just a typical Chinese student, and I lack the power and time to fully comprehend these codes. I can hardly  consider myself an Emacs hacker. I see that I am just an ordinary Emacs  user.
 
-* Haskell / Purescript / Elm / OCaml
-* Ruby / Ruby on Rails
-* SQL
-* CSS / LESS / SASS / SCSS
-* Javascript / Typescript / Coffeescript
-* HTML / HAML / Markdown / Textile / ERB
-* Common Lisp (with Slime)
-* Python
-* Rust
-* Clojure (with Cider and nRepl)
-* PHP
-* Erlang
+Normal is the standard of life, so I decided to do things that an  ordinary person can do. I abandoned everything that appeared modern and  cool on the surface. I want life to be simple again, just like  childhood. I gave up calling myself an Emacs hacker, but I can now be  more true to myself.
 
-In particular, there's a nice config for *autocompletion* with
-[corfu](https://github.com/minad/corfu), and
-`flymake` (re-using backends from [flycheck](http://www.flycheck.org))
-is used to immediately highlight syntax errors in Ruby, Python,
-Javascript, Haskell and a number of other languages.
+I criticized and inherited the mindset of redguardtoo. Like him, I also  use the Purcell Emacs configuration as my base setup. However, I just  want Emacs to be a powerful code editor, not an all-in-one solution. I  gave up on Emacs as a code editor and instead view it as a writing  editor. I will use minimal configuration to turn it into a second Bard  and card for taking notes.
 
-LSP support is provided using `eglot`.
+I also gave up on using Emacs as a time management tool. I never use org mode to plan my time. There's just one exception when I use org mode to express what I want to do and clarify things - it's like recording the  voice of my mind.
 
-## Supported Emacs versions
+Now, you can see my new Emacs configuration in the image below. It is a beautiful tool and maintains the appropriate complexity.
 
-Use the latest released Emacs version available to you. The author
-typically uses the latest stable version.
-
-The config should run on Emacs 26.1 or greater and is designed to
-degrade smoothly - see the CI build - but even basic enhancements
-like completion may be unavailable if your Emacs is too old.
-
-Some Windows users might need to follow
-[these instructions](http://xn--9dbdkw.se/diary/how_to_enable_GnuTLS_for_Emacs_24_on_Windows/index.en.html)
-to get TLS (ie. SSL) support included in their Emacs.
-
-## Other requirements
-
-To make the most of the programming language-specific support in this
-config, further programs will likely be required, particularly those
-that [flycheck](https://github.com/flycheck/flycheck) uses to provide
-on-the-fly syntax checking.
-
-## Installation
-
-To install, clone this repo to `~/.emacs.d`, i.e. ensure that the
-`init.el` contained in this repo ends up at `~/.emacs.d/init.el`:
-
-```
-git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
-```
-
-Upon starting up Emacs for the first time, further third-party
-packages will be automatically downloaded and installed. If you
-encounter any errors at that stage, try restarting Emacs, and possibly
-running `M-x package-refresh-contents` before doing so.
-
-
-## Updates
-
-Update the config with `git pull`. You'll probably also want/need to
-update the third-party packages regularly too, because that's what I
-do, and the config assumes it:
-
-<kbd>M-x package-list-packages</kbd>, then <kbd>U</kbd> followed by <kbd>x</kbd>.
-
-You should usually restart Emacs after pulling changes or updating
-packages so that they can take effect. Emacs should usually restore
-your working buffers when you restart due to this configuration's use
-of the `desktop` and `session` packages.
-
-## Changing themes and adding your own customization
-
-To add your own customization, use <kbd>M-x customize</kbd>, <kbd>M-x
-customize-themes</kbd> etc. and/or create a file
-`~/.emacs.d/lisp/init-local.el` which looks like this:
-
-```el
-... your code here ...
-
-(provide 'init-local)
-```
-
-If you need initialisation code which executes earlier in the startup process,
-you can also create an `~/.emacs.d/lisp/init-preload-local.el` file.
-
-If you plan to customize things more extensively, you should probably
-just fork the repo and hack away at the config to make it your own!
-Remember to regularly merge in changes from this repo, so that your
-config remains compatible with the latest package and Emacs versions.
-
-*Please note that I cannot provide support for customised versions of
-this configuration.*
-
-## Support / issues
-
-If you hit any problems, please first ensure that you are using the latest version
-of this code, and that you have updated your packages to the most recent available
-versions (see "Updates" above). If you still experience problems, go ahead and
-[file an issue on the github project](https://github.com/purcell/emacs.d).
-
--Steve Purcell
-
-<hr>
-
-
-[💝 Support this project and my other Open Source work](https://www.patreon.com/sanityinc)
-
-[💼 LinkedIn profile](https://uk.linkedin.com/in/stevepurcell)
-
-[✍ sanityinc.com](http://www.sanityinc.com/)
-
-[🐦 @sanityinc](https://twitter.com/sanityinc)
+![image-20231031195823877](https://ellog.oss-cn-beijing.aliyuncs.com/ossimgs/image-20231031195823877.png)
