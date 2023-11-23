@@ -3,10 +3,6 @@
 
 ;;; Code:
 
-;;; 设置清华源
-(setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
-                         ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 ;; 安装 `use-package'
 (unless (package-installed-p 'use-package)
@@ -63,6 +59,18 @@
                           (bookmarks . 6)
                           ))
   )
+
+(use-package nerd-icons   
+	     :ensure t   
+	     :if (display-graphic-p)   
+	     )
+	
+(use-package all-the-icons   
+	     :ensure t   
+	     :if (display-graphic-p)
+	     )
+
+
 
 ;;; 设置卡片笔记为文献笔记的搭建做准备
 (use-package org-roam
