@@ -7,6 +7,9 @@
 ;; behaviour so that startup is consistent across Emacs versions.
 
 ;;; Code:
+(setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+                         ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 (setq package-enable-at-startup nil)
 
