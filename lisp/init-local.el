@@ -43,7 +43,7 @@
     ;; Set the title
     (setq dashboard-banner-logo-title "Welcom Inkwell Emacs")
     ;; Set the banner
-    (setq dashboard-startup-banner "/home/elon/.emacs.d/logo.png")
+    (setq dashboard-startup-banner "~/.emacs.d/logo.png")
     ;; Content is not centered by default. To center, set
     (setq dashboard-center-content t)
     (setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
@@ -60,15 +60,15 @@
                           ))
   )
 
-(use-package nerd-icons   
-	     :ensure t   
-	     :if (display-graphic-p)   
-	     )
-	
-(use-package all-the-icons   
-	     :ensure t   
-	     :if (display-graphic-p)
-	     )
+(use-package nerd-icons
+  :ensure t
+  :if (display-graphic-p)
+  )
+
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p)
+  )
 
 
 
@@ -76,7 +76,7 @@
 (use-package org-roam
   :ensure t
   :custom
-  (org-roam-directory (file-truename "/home/elon/Documents/Note/Org-Roam"))
+  (org-roam-directory (file-truename "~/org-roam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)
